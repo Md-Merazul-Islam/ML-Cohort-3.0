@@ -20,3 +20,5 @@ print(ans)
 #using building functions
 ans = sum(a)
 print(ans)
+
+
