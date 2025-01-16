@@ -28,3 +28,4 @@ for i in result.values():
     total += i
 
 print(total / len(result))
+
