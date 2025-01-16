@@ -12,3 +12,4 @@ a = tuple(b)
 
 # Prints the modified tuple.
 print(a)
+
