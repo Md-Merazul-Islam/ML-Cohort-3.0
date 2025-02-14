@@ -1,0 +1,17 @@
+training error =2%  
+test error =25%     
+overfited=low bisa + high variance 
+
+
+----------------------------------------------------------------
+
+training error =25%
+test error =25%
+
+underfited = high bias + high variance
+
+----------------------------------------------------------------
+training error <10%
+test error <10%
+
+genaralize = low bisa + high variance
