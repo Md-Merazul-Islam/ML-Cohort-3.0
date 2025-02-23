@@ -1,17 +1,21 @@
-training error =2%  
-test error =25%     
-overfited=low bisa + high variance 
-
-
-----------------------------------------------------------------
-
-training error =25%
-test error =25%
-
-underfited = high bias + high variance
+Overfitting (Low Bias + High Variance):
+Training Error: Very low (like 2%)
+Test Error: High (like 25%)
 
 ----------------------------------------------------------------
-training error <10%
-test error <10%
 
-genaralize = low bisa + high variance
+Underfitting (High Bias + High Variance):
+Training Error: High (like 25%)
+Test Error: High (like 25%
+
+----------------------------------------------------------------
+Well-Generalized Model (Low Bias + Low Variance):
+Training Error: Very low (<10%)
+Test Error: Very low (<10%)
+
+
+
+
+Overfitting = Low Bias + High Variance (Great on training, bad on test data).
+Underfitting = High Bias + High Variance (Bad on both training and test data).
+Generalization = Low Bias + Low Variance (Good on both training and test data).

@@ -1,0 +1,22 @@
+uniqueid;name;class;descr;type;action;actionscript;criticality;owner;startdate;enddate;group;tags;platform;os;gdprcompliant;cybersecurity;version;input;output;sourceclass;sourceid;targetclass;targetid;modelid;visualizationid;pagesize;template;Layout;Arrange;groups;shapemargin
+Proc-001;My Process 1;Process;This is a description;business;Insert;;Mission Critical;;1 jan 2020;31 dec 2025;Sales Processes;project ABC;;;;;;data1;data2;;;;;;;;;;;;
+Proc-002;My Process 2;Process;This is a description;business;Insert;;Business Critical;Mr. Peterson;1 jan 2020;31 dec 2022;Sales Processes;project ABC;;;;;;data3;data4;;;;;;;;;;;;
+App-001;My Application 1;Application;This is a description ;web application;Insert;;Business Operational;;1 jan 2020;31 dec 2023;Business Applications;project ABC,onpremise,nomfa;Microsoft;;Yes;Low;V5;;;;;;;;;;;;;;
+App-002;My Application 2;Application;This is a description ;web application;Insert;;Administrative Service;Mrs. Anderson;1 jan 2020;31 dec 2022;Business Applications;project ABC,mfa,cloud;Oracle;;No;High;V3;;;;;;;;;;;;;;
+Svr-001;My Server 1;Server;This is a description;cloud;Insert;;Business Critical;;1 jan 2020;31 dec 2023;Location ABC;project ABC;;Linux;;;;;;;;;;;;;;;;;
+Svr-002;My Server 2;Server;This is a description;on premise;Insert;;Business Operational;external;1 jan 2020;31 dec 2025;Location ABC;project ABC;;Windows;;;;;;;;;;;;;;;;;
+Model-1;My Model;Model;My Example Model;;Insert;;;;;;;;;;;;;;;;;;;;;;;;;;
+Visualization-1;My Visualization;Visualization;;;Insert;;;;;;;;;;;;;;;;;;;Model-1;;A3;Enterprise_Map;L03_C01_C01_C01;Center;Sales Processes,Business Applications,Location ABC;20
+Change-001;Replace App1 On prem with App1 cloud;Change;;;;updateObjects(application,1002,tags,cloud);updateObjects(application,1002,name,CRM Cloud);updateObjects(process,1000,tags,high);;;;;;;;;;;;;;;;;;;Visualization-1;;;;
+Change-002;Upgrade App2 to latests version (with MFA);Change;;;;updateObjects(application,1,tags,cloud);updateObjects(application,1,name,CRM Cloud);updateObjects(capability,1,tags,high);;;;;;;;;;;;;;;;;;;Visualization-1;;;;
+Change-003;Implement new payment solution;Change;;;;;;;;;;;;;;;;;;;;;;;Visualization-1;;;;;;
+View-001;Processes supported with unsecure applications;View;;;;colorizeRelatedObjects(process,application,name,nomfa,red);;;;;;;;;;;;;;;;;;;Visualization-1;;;;;;
+View-002;Unsecure applications (no mfa);View;;;;addDotTags(nomfa,red);;;;;;;;;;;;;;;;;;;Visualization-1;;;;;;
+View-003;Cloud applications;View;;;;colorizeTags(cloud,cyan);;;;;;;;;;;;;;;;;;;Visualization-1;;;;;;
+View-004;Onpremise applications;View;;;;addImageBefore(tags,onpremise,danger);;;;;;;;;;;;;;;;;;;Visualization-1;;;;;;
+Rel-001;;Relationship;;association;Insert;;;;;;;;;;;;;;;Server;Svr-002;Application;App-001;Model-1;;;;;;;
+Rel-002;;Relationship;;association;Insert;;;;;;;;;;;;;;;Server;Svr-001;Application;App-002;Model-1;;;;;;;
+Rel-003;;Relationship;;association;Insert;;;;;;;;;;;;;;;Server;Svr-002;Application;App-002;Model-1;;;;;;;
+Rel-004;;Relationship;;association;Insert;;;;;;;;;;;;;;;Application;App-001;Process;Proc-001;Model-1;;;;;;;
+Rel-005;;Relationship;;association;Insert;;;;;;;;;;;;;;;Application;App-002;Process;Proc-002;Model-1;;;;;;;
+Rel-006;;Relationship;;association;Insert;;;;;;;;;;;;;;;Application;App-002;Process;Proc-002;Model-1;;;;;;;
